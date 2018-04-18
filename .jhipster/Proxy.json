@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "api",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "contentType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "header",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateModified",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "proxy",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "username",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "website",
+            "fieldType": "String"
+        }
+    ],
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "dummy",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

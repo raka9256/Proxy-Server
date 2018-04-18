@@ -1,0 +1,16 @@
+version: '2'
+services:
+    proxy_server-mongodb:
+        image: mongo:3.2.10
+        ports:
+            - "27017:27017"
+        command: mongos --configdb proxy_server-mongodb-config
+    proxy_server-mongodb-node:
+        build:
+            context: .
+            dockerfile: mongodb/MongoDB.Dockerfile
+        command: mongod --replSet rs1 --noprealloc --smallfiles
+    proxy_server-mongodb-config:
+        image: mongo:3.2.10
+        container_name: proxy_server-mongodb-config
+        command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db
